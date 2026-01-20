@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>ArticleServices </title>
+
+</head>
+<body>
+    <h1>Mes Article et Services</h1>
+    <table>
+     <tr th:each ="AS :${ArticleService}"> <!--th: each c'est une boucle en tymlif -->
+            <td th:text="${AS.nomArticle}"></td>
+            <td th:text="${AS.prixArticle}"></td>
+        </tr>
+    </table>
+
+</body>
+</html>

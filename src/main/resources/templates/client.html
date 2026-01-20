@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <h1>salam les clients </h1>
+    <table>
+        <tr th:each="C:${Client}">
+            <td th:text="${C.nomClient}"></td>
+            <td th:text="${C.prenomClient}"></td>
+            <td th:text="${C.numeroTelClient}"></td>
+        </tr>
+    </table>
+
+</body>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Facture</title>
+</head>
+<body>
+    <table>
+        <tr th:each="F:${Factures}">
+            <td th:text="${F.numeroFacture}"></td>
+            <td th:text="${F.dateFacture}"></td>
+        </tr>
+    </table>
+
+    <table>
+        <tr th:each="LF:${ligneFacture}">
+            <td th:text="${LF.idarticle}"></td>
+            <td th:text="${LF.prixUnitaire}"></td>
+        </tr>
+
+
+    </table>
+</body>
+</html>

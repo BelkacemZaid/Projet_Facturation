@@ -1,0 +1,27 @@
+spring:
+  application:
+    name: ProjetNFP121
+  datasource:
+    url: jdbc:mysql://localhost:3308/FacturationGMStore
+    username: root
+    password: root123
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
+        implicit-strategy: org.hibernate.boot.model.naming.ImplicitNamingStrategyLegacyHbmImpl
+    properties:
+      hibernate:
+        format_sql: true
+    open-in-view: false
+
+server:
+  port: 8082
+
+logging:
+  level:
+    org.hibernate.SQL: debug
+    org.hibernate.sql: debug
+    org.hibernate.orm.jdbc.bind: trace

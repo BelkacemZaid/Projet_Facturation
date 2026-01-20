@@ -28,3 +28,9 @@ Thumbs.db
 .vscode/
 .idea/
 *.iml
+/target/
+/*.log
+/out/
+/.mvn/wrapper/maven-wrapper.jar
+Projet_Facturation/
+
