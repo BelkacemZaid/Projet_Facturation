@@ -23,4 +23,35 @@ public class Client {
     @Column(name = "numeroTelClient")
     private String numeroTelClient;
 
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    public String getNomClient() {
+        return nomClient;
+    }
+
+    public void setNomClient(String nomClient) {
+        this.nomClient = nomClient;
+    }
+
+    public String getPrenomClient() {
+        return prenomClient;
+    }
+
+    public void setPrenomClient(String prenomClient) {
+        this.prenomClient = prenomClient;
+    }
+
+    public String getNumeroTelClient() {
+        return numeroTelClient;
+    }
+
+    public void setNumeroTelClient(String numeroTelClient) {
+        this.numeroTelClient = numeroTelClient;
+    }
 }

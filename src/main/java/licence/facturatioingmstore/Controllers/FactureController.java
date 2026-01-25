@@ -18,8 +18,9 @@ public class FactureController {
     private FactureService factureService;
     private LigneFactureService ligneFactureService;
 
-    public FactureController(FactureService factureService){
+    public FactureController(FactureService factureService,LigneFactureService ligneFactureService ){
         this.factureService = factureService;
+        this.ligneFactureService = ligneFactureService;
     }
 
     @GetMapping("/facture")
@@ -29,10 +30,10 @@ public class FactureController {
     }
 
 
-    @GetMapping("/facture/{idfacture}/ligneFacture")
-    public String LigneByIdFacture(@PathVariable Integer idfacture, Model model){
+    @GetMapping("/facture/{id}/ligneFacture")
+    public String LigneByIdFacture(@PathVariable("id") Integer idfacture, Model model){
         model.addAttribute("ligneFacture", ligneFactureService.getAllLigneFactureById(idfacture));
-        return "facture";
+            return "facture";
     }
 
 }

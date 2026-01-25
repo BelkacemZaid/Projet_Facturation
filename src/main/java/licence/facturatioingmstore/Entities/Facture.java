@@ -32,7 +32,46 @@ public class Facture {
 
     //“OneToMany = Une facture a plusieurs lignes, cascade = tout changement sur la facture impacte automatiquement les lignes,
     // orphanRemoval = toute ligne non rattachée disparaît de la base. On stocke les lignes dans un ensemble vide sans doublons.”
-    @OneToMany(mappedBy = "facture", cascade = CascadeType.ALL, orphanRemoval = true)
+    @OneToMany(mappedBy = "idfacture", cascade = CascadeType.ALL, orphanRemoval = true)  //le mappedBy "facture" c'est pour que LigneFacture accede avec le meme nom
     private Set<LigneFacture> ligneFactures = new HashSet<>();
 
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    public LocalDate getDateFacture() {
+        return dateFacture;
+    }
+
+    public void setDateFacture(LocalDate dateFacture) {
+        this.dateFacture = dateFacture;
+    }
+
+    public String getNumeroFacture() {
+        return numeroFacture;
+    }
+
+    public void setNumeroFacture(String numeroFacture) {
+        this.numeroFacture = numeroFacture;
+    }
+
+    public Client getIdclient1() {
+        return idclient1;
+    }
+
+    public void setIdclient1(Client idclient1) {
+        this.idclient1 = idclient1;
+    }
+
+    public Set<LigneFacture> getLigneFactures() {
+        return ligneFactures;
+    }
+
+    public void setLigneFactures(Set<LigneFacture> ligneFactures) {
+        this.ligneFactures = ligneFactures;
+    }
 }

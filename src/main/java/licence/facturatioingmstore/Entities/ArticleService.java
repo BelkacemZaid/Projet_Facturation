@@ -1,9 +1,6 @@
 package licence.facturatioingmstore.Entities;
 
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -15,6 +12,7 @@ import java.math.BigDecimal;
 @Table(name = "Article_Service")
 public class ArticleService {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "idArticle", nullable = false)
     private Integer id;
 
@@ -27,4 +25,35 @@ public class ArticleService {
     @Column(name = "prixArticle", precision = 15, scale = 2)
     private BigDecimal prixArticle;
 
+    public Integer getId() {
+        return id;
+    }
+
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
+    public Integer getQuantiteArticle() {
+        return quantiteArticle;
+    }
+
+    public void setQuantiteArticle(Integer quantiteArticle) {
+        this.quantiteArticle = quantiteArticle;
+    }
+
+    public String getNomArticle() {
+        return nomArticle;
+    }
+
+    public void setNomArticle(String nomArticle) {
+        this.nomArticle = nomArticle;
+    }
+
+    public BigDecimal getPrixArticle() {
+        return prixArticle;
+    }
+
+    public void setPrixArticle(BigDecimal prixArticle) {
+        this.prixArticle = prixArticle;
+    }
 }

@@ -8,10 +8,10 @@
 <body>
     <h1>Mes Article et Services</h1>
     <table>
-     <tr th:each ="AS :${ArticleService}"> <!--th: each c'est une boucle en tymlif -->
-            <td th:text="${AS.nomArticle}"></td>
-            <td th:text="${AS.prixArticle}"></td>
-        </tr>
+         <tr th:each ="AS:${ArticleService}"> <!--th: each c'est une boucle en tymlif -->
+             <td th:text="${AS.nomArticle}"></td>
+             <td th:text="${AS.prixArticle}"></td>
+         </tr>
     </table>
 
 </body>

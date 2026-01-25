@@ -23,9 +23,11 @@ public class LigneFactureService {
         return ligneFactureRepository.findAll();
     }
 
-    public List<LigneFacture> getAllLigneFactureById(Integer idfacture){
-        return ligneFactureRepository.findByFactureId(idfacture);
-    }
+        public List<LigneFacture> getAllLigneFactureById(Integer idfacture){
+            System.out.println("les ligne facture sont appeller avec l'id facture ");
+            return ligneFactureRepository.findLigneFactureByFactureId(idfacture);
+
+        }
 
     public LigneFacture addLigneFacture( LigneFacture ligneFacture){
         return ligneFactureRepository.save(ligneFacture);
